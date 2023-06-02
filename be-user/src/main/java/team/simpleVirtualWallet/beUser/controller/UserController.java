@@ -1,6 +1,6 @@
 package team.simpleVirtualWallet.beUser.controller;
 
-import jakarta.validation.Valid;
+import javax.validation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +14,7 @@ import team.simpleVirtualWallet.beUser.dto.GetUserRequestDto;
 import team.simpleVirtualWallet.beUser.dto.GetUserResponseDto;
 import team.simpleVirtualWallet.beUser.service.UserService;
 
-//@RestController
+@RestController
 public class UserController {
 
     @Autowired

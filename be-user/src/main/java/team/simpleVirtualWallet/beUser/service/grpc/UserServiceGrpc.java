@@ -1,4 +1,4 @@
-package team.simpleVirtualWallet.beUser.grpc.userGrpc;
+package team.simpleVirtualWallet.beUser.service.grpc;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 

@@ -5,7 +5,7 @@ syntax = "proto3"; // 定义语法类型，通常proto3好于proto2，proto2好�
 package user; // 定义作用域
 option java_multiple_files = false; // 表示下面的message不需要编译成多个java文件
 option java_outer_classname = "UserGrpc"; // 表示下面的message编译成的java类文件的名字
-option java_package = "team.simpleVirtualWallet.beUser.grpc.userGrpc"; //指定该proto文件编译成的java源文件的包名
+option java_package = "team.simpleVirtualWallet.beUser.service.grpc"; //指定该proto文件编译成的java源文件的包名
 
 
 message User {

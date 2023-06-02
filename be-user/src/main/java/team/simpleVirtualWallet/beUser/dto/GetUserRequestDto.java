@@ -1,6 +1,6 @@
 package team.simpleVirtualWallet.beUser.dto;
 
-import jakarta.validation.constraints.AssertTrue;
+import javax.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,8 +1,10 @@
 package team.simpleVirtualWallet.beUser.service;
 
+import org.springframework.stereotype.Service;
 import team.simpleVirtualWallet.beUser.model.User;
 
 import java.util.Optional;
+
 
 public interface UserService {
 
