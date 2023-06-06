@@ -1,4 +1,4 @@
-package team.simpleVirtualWallet.beUser.controller;
+package team.simpleVirtualWallet.beUser.beUserService.controller;
 
 import javax.validation.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.ResponseEntity;
-import team.simpleVirtualWallet.beUser.dto.AddUserRequestDto;
-import team.simpleVirtualWallet.beUser.dto.AddUserResponseDto;
-import team.simpleVirtualWallet.beUser.dto.GetUserRequestDto;
-import team.simpleVirtualWallet.beUser.dto.GetUserResponseDto;
-import team.simpleVirtualWallet.beUser.service.UserService;
+import team.simpleVirtualWallet.beUser.beUserService.dto.AddUserRequestDto;
+import team.simpleVirtualWallet.beUser.beUserService.dto.AddUserResponseDto;
+import team.simpleVirtualWallet.beUser.beUserService.dto.GetUserRequestDto;
+import team.simpleVirtualWallet.beUser.beUserService.dto.GetUserResponseDto;
+import team.simpleVirtualWallet.beUser.beUserService.service.UserService;
 
 @RestController
 public class UserController {

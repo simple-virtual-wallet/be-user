@@ -1,10 +1,11 @@
-package team.simpleVirtualWallet.beUser.service;
+package team.simpleVirtualWallet.beUser.beUserService.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import team.simpleVirtualWallet.beUser.dao.UserDao;
-import team.simpleVirtualWallet.beUser.model.User;
+import team.simpleVirtualWallet.beUser.beUserService.dao.UserDao;
+import team.simpleVirtualWallet.beUser.beUserService.exception.VerifyUserException;
+import team.simpleVirtualWallet.beUser.beUserService.model.User;
 
 import java.util.Optional;
 
@@ -42,4 +43,20 @@ public class UserServiceImpl implements UserService {
         return Optional.empty();
     }
 
+    @Override
+    public User verifyUser(String account, String password) {
+        log.info("verifyUser: {} {}", account, password);
+
+        var user = userDao.findByAccount(account);
+
+        if(user.isEmpty()) {
+            throw new VerifyUserException(VerifyUserException.VerifyUserExceptionType.NoSuchUser, "no such user");
+        }
+
+        if(!user.get().getPasswordHash().equals(password)) {
+            throw new VerifyUserException(VerifyUserException.VerifyUserExceptionType.WrongPassword, "wrong password");
+        }
+
+        return user.get();
+    }
 }

@@ -1,4 +1,4 @@
-package team.simpleVirtualWallet.beUser.dto;
+package team.simpleVirtualWallet.beUser.beUserService.dto;
 
 import javax.validation.constraints.*;
 import lombok.AllArgsConstructor;

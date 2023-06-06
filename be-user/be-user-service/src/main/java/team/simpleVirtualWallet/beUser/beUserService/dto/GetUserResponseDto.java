@@ -1,4 +1,4 @@
-package team.simpleVirtualWallet.beUser.dto;
+package team.simpleVirtualWallet.beUser.beUserService.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,11 +1,11 @@
-package team.simpleVirtualWallet.beUser.service.grpc;
+package team.simpleVirtualWallet.beUser.beUserService.service.grpc;
 
 import io.grpc.stub.StreamObserver;
 import lombok.extern.slf4j.Slf4j;
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.springframework.beans.factory.annotation.Autowired;
-import team.simpleVirtualWallet.beUser.model.User;
-import team.simpleVirtualWallet.beUser.service.UserService;
+import team.simpleVirtualWallet.beUser.beUserService.model.User;
+import team.simpleVirtualWallet.beUser.beUserService.service.UserService;
 
 //https://yidongnan.github.io/grpc-spring-boot-starter/zh-CN/server/getting-started.html
 @GrpcService
@@ -79,6 +79,31 @@ public class UserServiceGrpcImpl extends UserServiceGrpc.UserServiceImplBase {
         responseObserver.onCompleted();
     }
 
+    @Override
+    public void verifyUser(UserGrpc.VerifyUserReq req,
+                           StreamObserver<UserGrpc.VerifyUserRes> responseObserver) {
+
+        log.info("verifyUser: {}", req);
+
+        var user = userService.verifyUser(req.getAccount(), req.getPassword());
+
+        UserGrpc.VerifyUserRes res = UserGrpc.VerifyUserRes.newBuilder()
+                .setUser(UserGrpc.User.newBuilder()
+                        .setId(user.getId())
+                        .setAccount(user.getAccount())
+                        .setMail(user.getMail())
+                        .setPhone(user.getPhone())
+                        .build())
+                .build();
+
+        log.info("verifyUser: return {}", res);
+
+        // 调用onNext()方法来通知gRPC框架把reply 从server端 发送回 client端
+        responseObserver.onNext(res);
+
+        // 表示完成调用
+        responseObserver.onCompleted();
+    }
 }
 
 

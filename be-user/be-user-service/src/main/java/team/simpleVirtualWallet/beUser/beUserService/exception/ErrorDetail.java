@@ -1,4 +1,4 @@
-package team.simpleVirtualWallet.beUser.exception;
+package team.simpleVirtualWallet.beUser.beUserService.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

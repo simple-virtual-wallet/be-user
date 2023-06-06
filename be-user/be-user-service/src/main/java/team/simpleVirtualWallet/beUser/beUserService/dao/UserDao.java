@@ -1,8 +1,8 @@
-package team.simpleVirtualWallet.beUser.dao;
+package team.simpleVirtualWallet.beUser.beUserService.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import team.simpleVirtualWallet.beUser.model.User;
+import team.simpleVirtualWallet.beUser.beUserService.model.User;
 
 import java.util.Optional;
 

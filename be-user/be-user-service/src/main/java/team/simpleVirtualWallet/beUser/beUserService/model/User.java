@@ -1,4 +1,4 @@
-package team.simpleVirtualWallet.beUser.model;
+package team.simpleVirtualWallet.beUser.beUserService.model;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;

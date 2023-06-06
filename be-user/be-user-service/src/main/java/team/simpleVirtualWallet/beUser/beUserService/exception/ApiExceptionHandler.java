@@ -1,4 +1,4 @@
-package team.simpleVirtualWallet.beUser.exception;
+package team.simpleVirtualWallet.beUser.beUserService.exception;
 
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;

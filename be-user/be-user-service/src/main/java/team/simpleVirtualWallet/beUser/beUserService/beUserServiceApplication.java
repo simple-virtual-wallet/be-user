@@ -1,13 +1,13 @@
-package team.simpleVirtualWallet.beUser;
+package team.simpleVirtualWallet.beUser.beUserService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BeUserApplication {
+public class beUserServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BeUserApplication.class, args);
+		SpringApplication.run(beUserServiceApplication.class, args);
 	}
 
 }

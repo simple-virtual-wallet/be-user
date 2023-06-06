@@ -1,10 +1,10 @@
-package team.simpleVirtualWallet.beUser.dto;
+package team.simpleVirtualWallet.beUser.beUserService.dto;
 
 import javax.validation.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import team.simpleVirtualWallet.beUser.model.User;
+import team.simpleVirtualWallet.beUser.beUserService.model.User;
 
 @Data
 @AllArgsConstructor
